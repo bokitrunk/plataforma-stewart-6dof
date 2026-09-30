@@ -4,7 +4,7 @@
 [![Status](https://img.shields.io/badge/Estado-En_Desarrollo-orange.svg)]()
 [![License](https://img.shields.io/badge/Licencia-MIT-green.svg)]()
 
-Bienvenido al repositorio central de la **Plataforma Gough-Stewart de 6 Grados de Libertad (6-DOF)**. Este proyecto semestral abarca el diseño, la simulación matemática en tiempo real (*Gemelo Digital*) y el control físico de una plataforma de movimiento articulada por 6 actuadores independientes, alimentada por datos de telemetría de vuelo en tiempo real desde **X-Plane** vía comunicación UDP.
+Bienvenido al repositorio central del proyecto **Diseño e implementación de una plataforma Stewart para simulaciones de vuelo  de aeronaves no tripuladas​**. Este proyecto semestral abarca el diseño, la simulación matemática en tiempo real (*Gemelo Digital*) y el control físico de una plataforma de movimiento articulada por 6 actuadores independientes, alimentada por datos de telemetría de vuelo en tiempo real desde **X-Plane** vía comunicación UDP.
 
 ---
 
