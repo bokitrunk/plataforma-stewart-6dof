@@ -19,12 +19,12 @@ Bienvenido al repositorio central del proyecto **Diseño e implementación de un
 
 ## 📁 Estructura del Repositorio
 
-```text
-plataforma-stewart-6dof/
+```plataforma-stewart-6dof/
 ├── docs/                       # Documentación técnica y memoria del proyecto
 │   ├── bibliografia/           # Papers, data-sheets y manuales técnicos (PDFs)
-│   ├── decisiones/             # Registros de Decisiones de Arquitectura (ADRs)
-│   └── matematica_geometria.md # Apuntes sobre matrices y cinemática
+│   ├── decisiones/             # Registros de Decisiones de Arquitectura (ADRs) y matrices AHP
+│   ├── guias/                  # Guías operativas, flujo de trabajo Git y selección tecnológica
+│   └── proyecto_contexto_hitl.md # Definición de objetivos, problema y contexto HITL vs SITL
 ├── src/                        # Código fuente principal
 │   └── modelo.py               # Script de simulación y renderizado 3D
 ├── tests/                      # Pruebas unitarias de las funciones matemáticas
