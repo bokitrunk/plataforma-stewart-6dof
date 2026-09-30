@@ -1,0 +1,1 @@
+# plataforma-stewart-6dof
