@@ -26,7 +26,7 @@ Siguiendo la recomendación del profesor Alejandro López, se aplicará la metod
 * **X-Plane:** Simulador actual basado en Blade Element Theory[cite: 3].
 * **FlightGear:** Simulador de código abierto[cite: 3].
 * **SimNet Aero:** Software dedicado a simulación de RPAs (https://www.simnet.aero)[cite: 3].
-* **Matlab / Simulink (Aerospace Blockset & UAV Toolbox):** Entorno de desarrollo de modelos dinámicos (https://la.mathworks.com)[cite: 3].
+* **Matlab / Simulink (Aerospace Blockset & UAV Toolbox):** Entorno de desarrollo de modelos dinámicos (https://la.mathworks.com/products/aerospace-blockset.html)[cite: 3].
 
 ---
 
