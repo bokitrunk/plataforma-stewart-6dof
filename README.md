@@ -9,9 +9,9 @@ Bienvenido al repositorio central del proyecto **Diseño e implementación de un
 
 ## 📌 Características Principales
 
-* **Simulación Cinemática Inversa:** Cálculo en tiempo real de la longitud necesaria de cada uno de los 6 actuadores ($l_1 \dots l_6$) en base a posiciones $(X, Y, Z)$ y rotaciones ($\text{pitch}, \text{roll}, \text{yaw}$).
-* **Filtro Washout Dinámico (Pasa-Altos):** Implementación de decaimiento dinámico (`ALPHA_WASHOUT = 0.92`) para simular sensaciones de aceleración angular en el eje Yaw sin saturar los límites mecánicos.
-* **Integración con X-Plane:** Recepción de paquetes de telemetría vía red (UDP) con detección de arranque sin saltos bruscos (`raw_yaw_prev = None`).
+* **Simulación cinemática inversa:** Cálculo en tiempo real de la longitud necesaria de cada uno de los 6 actuadores ($l_1 \dots l_6$) en base a posiciones $(X, Y, Z)$ y rotaciones ($\text{pitch}, \text{roll}, \text{yaw}$).
+* **Filtro Washout Dinámico (Pasa-Altos):** IImplementación de algoritmos de filtrado (pasa-altos/pasa-bajos) en Simulink para simular sensaciones inerciales (aceleraciones y velocidades angulares) en el autopiloto sin saturar los límites mecánicos de los actuadores.
+* **Integración con Simulink y FlightGear:** Co-simulación en tiempo real mediante comunicación UDP, desacoplando el cálculo dinámico en Simulink de la animación visual 3D en FlightGear.
 * **Visualización 3D:** Renderizado vectorial en 3D del chasis base y la plataforma superior articulada.
 
 ---
