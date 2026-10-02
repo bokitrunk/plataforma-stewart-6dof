@@ -7,22 +7,13 @@
 ---
 
 ## Contexto
-Para el desarrollo del banco de pruebas HITL, se requiere evaluar alternativas de simuladores de vuelo dedicados o adaptables a aeronaves de pequeña escala (RPAs). Se busca seleccionar la plataforma de software que ofrezca el mejor balance entre fidelidad aerodinámica, latencia de transmisión de telemetría e integración con el autopiloto Pixhawk.
+Para el desarrollo del banco de pruebas Hardware-in-the-Loop (HITL), se requería evaluar y seleccionar la plataforma de software que ofreciera el mejor balance entre fidelidad aerodinámica, latencia de transmisión de telemetría e integración con el autopiloto Pixhawk.
 
-Siguiendo la recomendación del profesor Alejandro López, se aplicará la metodología **AHP (Analytic Hierarchy Process)** para estructurar la matriz de decisión.
-
----
-
-## Criterios de Evaluación y Ponderación
-
-1. **Latencia y Frecuencia de Transmisión (Milisegundos):** Velocidad para enviar datos de actitud hacia la plataforma.
-2. **Capacidad de Intervención y Código Abierto:** Permite modificar o extender la física de vuelo e interfaces.
-3. **Motor Gráfico:** Capacidad de inspeccionar de forma visual e intuitiva la aeronave simulada.
-4. **Fidelidad y Adaptabilidad para RPAs:** Representatividad de modelos dinámicos para aeronaves pequeñas.
+Siguiendo la recomendación del profesor Alejandro López, se aplicaron criterios cualitativos y cuantitativos inspirados en la metodología AHP (Analytic Hierarchy Process) para comparar las siguientes alternativas: 
 
 ---
 
-## Alternativas a evaluadar
+## Alternativas a evaluar
 * **X-Plane:** Simulador actual basado en Blade Element Theory.
 * **FlightGear:** Simulador de código abierto.
 * **SimNet Aero:** Software dedicado a la simulación de RPAs ([SimNet Aero](https://www.simnet.aero)).
@@ -30,6 +21,29 @@ Siguiendo la recomendación del profesor Alejandro López, se aplicará la metod
 
 ---
 
-## Decisiones Pendientes y Siguientes Pasos
-- [ ] Ejecutar las comparaciones pareadas de Saaty para los criterios definidos.
-- [ ] Validar la matriz resultante con los profesores patrocinantes (Bernardo, Cornejo).
+## Criterios de Evaluación y Ponderación
+
+1. **Latencia y frecuencia de transmisión (milisegundos):** Velocidad para enviar datos de actitud hacia la plataforma.
+2. **Capacidad de intervención y código abierto:** Permite modificar o extender la física de vuelo e interfaces.
+3. **Motor gráfico:** Capacidad de inspeccionar de forma visual e intuitiva la aeronave simulada.
+4. **Fidelidad y adaptabilidad para RPAs:** Representatividad de modelos dinámicos para aeronaves pequeñas.
+
+---
+
+## Decisión
+Se decide adoptar MATLAB / Simulink como la plataforma principal de cálculo, modelado de dinámica de vuelo y simulación de sensores IMU del proyecto, utilizando FlightGear como motor gráfico de animación en bucle secundario.
+
+---
+
+## Justificación técnica
+1. **Unificación en una sola plataforma:** MATLAB permite ejecutar la dinámica de vuelo, el modelado de ruido/bias de sensores IMU, el filtro washout y la cinemática inversa de la plataforma Stewart dentro del mismo entorno.
+2. **Tiempo real integrado:** Uso de Simulink Desktop Real-Time para garantizar tasas de refresco constantes y transmisiones UDP en milisegundos hacia el microcontrolador.
+3. **Bloques nativos para FlightGear:** La Aerospace Blockset incluye bloques de comunicación listos para enviar datos de actitud a FlightGear sin necesidad de middleware de terceros.
+4. **Licencia institucional:** Disponibilidad completa de las toolboxes especializadas gracias al convenio de la universidad.
+
+---
+
+## Consecuencias
+**Positivas:**Reducción drástica del error por jitter en el envío de datos, modelado realista de ruido de sensores sin código manual adicional y compatibilidad directa con C/C++ auto-generado para el controlador (ESP32).
+
+**A considerar:** Los archivos fuente principales en src/ pasarán de scripts en Python a modelos de Simulink (.slx) y scripts de apoyo en MATLAB (.m).
