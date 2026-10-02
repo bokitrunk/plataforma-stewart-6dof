@@ -10,7 +10,7 @@ Bienvenido al repositorio central del proyecto **Diseño e implementación de un
 ## 📌 Características Principales
 
 * **Simulación cinemática inversa:** Cálculo en tiempo real de la longitud necesaria de cada uno de los 6 actuadores ($l_1 \dots l_6$) en base a posiciones $(X, Y, Z)$ y rotaciones ($\text{pitch}, \text{roll}, \text{yaw}$).
-* **Filtro Washout Dinámico (Pasa-Altos):** IImplementación de algoritmos de filtrado (pasa-altos/pasa-bajos) en Simulink para simular sensaciones inerciales (aceleraciones y velocidades angulares) en el autopiloto sin saturar los límites mecánicos de los actuadores.
+* **Filtro Washout Dinámico (Pasa-Altos):** Implementación de algoritmos de filtrado (pasa-altos/pasa-bajos) en Simulink para simular sensaciones inerciales (aceleraciones y velocidades angulares) en el autopiloto sin saturar los límites mecánicos de los actuadores.
 * **Integración con Simulink y FlightGear:** Co-simulación en tiempo real mediante comunicación UDP, desacoplando el cálculo dinámico en Simulink de la animación visual 3D en FlightGear.
 * **Visualización 3D:** Renderizado vectorial en 3D del chasis base y la plataforma superior articulada.
 
