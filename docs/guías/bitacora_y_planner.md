@@ -18,7 +18,3 @@ Después de cada reunión con Bernardo, Cornejo, Alejandro López o docentes del
 ---
 
 ## Sincronización con Planner y Carta Gantt
-
-1. **Paso de Tareas a Planner:** Toda tarea aprobada o definida en las reuniones debe transferirse inmediatamente desde la Carta Gantt hacia la herramienta **Microsoft Planner** del equipo.
-2. **Asignación por Habilidades:** Distribuir las actividades semanales según las fortalezas individuales de los integrantes del equipo.
-3. **Puntos de Control:** Revisar el cumplimiento de tareas previo a cada presentación oficial de avance.
