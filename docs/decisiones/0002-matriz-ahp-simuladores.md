@@ -44,6 +44,6 @@ Se decide adoptar MATLAB / Simulink como la plataforma principal de cálculo, mo
 ---
 
 ## Consecuencias
-**Positivas:**Reducción drástica del error por jitter en el envío de datos, modelado realista de ruido de sensores sin código manual adicional y compatibilidad directa con C/C++ auto-generado para el controlador (ESP32).
+**Positivas:** Reducción drástica del error por jitter en el envío de datos, modelado realista de ruido de sensores sin código manual adicional y compatibilidad directa con C/C++ auto-generado para el controlador (ESP32).
 
 **A considerar:** Los archivos fuente principales en src/ pasarán de scripts en Python a modelos de Simulink (.slx) y scripts de apoyo en MATLAB (.m).
