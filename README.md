@@ -33,7 +33,7 @@ Bienvenido al repositorio central del proyecto **Diseño e implementación de un
 ```
 ---
 
-## Estado del proyecto / Avances recientes
+## Estado del proyecto / Avances recientes 26/10/2026
 * **Hardware y diseño mecánico (Maite):** Adquisición de varillas y rótulas estructurales. Modelado 3D de la plataforma de Stewart finalizado en Autodesk Inventor. (Pendiente: Integración del código de movimientos).
 * **Simulación y cinemática (Pipo):** Animación de la plataforma en Simulink y validación de detección de colisiones mecánicas. (En progreso: Formulación de la cinemática inversa e integración del bloque al lazo de control).
 * **Visualización (Benja):** Integración bidireccional exitosa entre Simulink y FlightGear para la visualización en tiempo real.
