@@ -30,7 +30,7 @@ Bienvenido al repositorio central del proyecto **Diseño e implementación de un
 ├── tests/                      # Pruebas de verificación de algoritmos
 ├── .gitignore                  # Archivos ignorados por Git
 └── README.md                   # Portada y documentación principal
-
+```
 ---
 
 ## Estado del proyecto / Avances recientes
