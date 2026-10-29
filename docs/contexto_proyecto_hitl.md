@@ -52,7 +52,15 @@ Diseñar e implementar un banco de pruebas **Hardware-in-the-Loop (HITL)** compu
                                [ Autopiloto Pixhawk / ArduPilot ] 
 ```
 
-### 4. Alcance y prioridades del semestre
-**Fase actual:** Construcción y validación del modelo de cinemática inversa y filtro washout en MATLAB/Simulink, asegurando la transmisión UDP estable hacia el controlador físico.
+## 4. Alcance y prioridades del semestre
 
-**Fase futura:** Integración y validación completa del lazo HITL en el Laboratorio de Técnicas Aeroespaciales (LTA).
+**Fase completada (Validación de Firmware & Hardware Base):**
+- Implementación y validación empírica de la periferia de hardware **LEDC** en el ESP32 a **50 Hz** (periodo $T = 20\text{ ms}$) en `GPIO 4` y `GPIO 18`.
+- Verificación de la señal, niveles lógicos ($3.28\text{ Vpp}$) y sincronización multicanal mediante osciloscopio (ZEEWEII DSO2512G), garantizando la ausencia de *jitter* mecánico antes de integrar los actuadores.
+
+**Fase actual:**
+- Construcción del modelo de cinemática inversa en MATLAB/Simulink y portado a C++ para el ESP32.
+- Implementación del filtro washout dinámico y estructuración de la comunicación UDP desde Simulink hacia el microcontrolador.
+
+**Fase futura:**
+- Ensamble mecánico con servomotores y validación del lazo cerrado Hardware-in-the-Loop (HITL) con el autopiloto Pixhawk en el Laboratorio de Técnicas Aeroespaciales (LTA).
