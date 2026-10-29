@@ -38,3 +38,27 @@ Bienvenido al repositorio central del proyecto **Diseño e implementación de un
 * **Simulación y cinemática (Pipo):** Animación de la plataforma en Simulink y validación de detección de colisiones mecánicas. (En progreso: Formulación de la cinemática inversa e integración del bloque al lazo de control).
 * **Visualización (Benja):** Integración bidireccional exitosa entre Simulink y FlightGear para la visualización en tiempo real.
 * **Sistemas (Aguayo):** Matriz técnica de microcontroladores finalizada y metodología de validación empírica (FPU, PWM, Latencia) estructurada para el ESP32.
+
+---
+## 📝 Registro de Avances: Validación de PWM por Hardware (LEDC)
+
+### 1. Resumen Técnico
+Se migró la generación de señales de control para servomotores desde una implementación por software a la periferia de hardware dedicada **LEDC** del ESP32. Esta transición elimina la carga de trabajo sobre la CPU y previene problemas de *jitter* (inestabilidad temporal en los pulsos) durante la ejecución de los algoritmos de cinemática inversa de la plataforma Stewart.
+
+### 2. Configuración Experimental
+* **Placa de desarrollo:** ESP32 montada sobre protoboard.
+* **Canales de salida:** 
+  * `GPIO 4` (Canal 1 - Sonda CH1)
+  * `GPIO 18` (Canal 2 - Sonda CH2)
+* **Instrumento de medición:** Osciloscopio digital portátil ZEEWEII DSO2512G.
+* **Parámetros de señal configurados:**
+  * **Frecuencia:** 50 Hz (Periodo T = 20 ms).
+  * **Resolución PWM:** 16 bits (0 - 65535).
+  * **Ancho de pulso inicial:** ~1.5 ms (Posición neutral del servomotor).
+
+### 3. Resultados Obtenidos
+* **Frecuencia Medida:** 50.0 Hz exacta en ambos canales.
+* **Tensión Pico a Pico (Vpp):** 3.28 V (Nivel lógico alto nominal del ESP32).
+* **Sincronización:** Operación multicanal paralela y estable verificada mediante medición simultánea en pantalla con escalas balanceadas a 1.00 V/div y 10.0 ms/div.
+
+![Captura Dual Channel PWM 50Hz](img/medicion_50Hz.jpeg)
