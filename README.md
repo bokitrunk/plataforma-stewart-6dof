@@ -1,35 +1,35 @@
-# 🚁 Plataforma Stewart 6-DOF (Gemelo Digital & Simulación)
+# 🚁 Plataforma Stewart 6-DOF ISPC
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![Status](https://img.shields.io/badge/Estado-En_Desarrollo-orange.svg)]()
 
-Bienvenido al repositorio central del proyecto **Diseño e implementación de una plataforma Stewart para simulaciones de vuelo  de aeronaves no tripuladas​**. Este proyecto semestral abarca el diseño, la simulación matemática en tiempo real (*Gemelo Digital*) y el control físico de una plataforma de movimiento articulada por 6 actuadores independientes, alimentada por datos de telemetría de vuelo en tiempo real desde **X-Plane** vía comunicación UDP.
+Bienvenido al repositorio central del proyecto **Diseño e implementación de una plataforma Stewart para simulaciones de vuelo de aeronaves no tripuladas​.** Este proyecto semestral abarca el diseño, la simulación matemática en tiempo real (*Gemelo Digital*) y el control físico de una plataforma de movimiento articulada por 6 actuadores independientes, alimentada por datos de telemetría de vuelo en tiempo real desde **X-Plane** vía comunicación UDP.
 
 ---
 
 ## 📌 Características Principales
 
-* **Simulación cinemática inversa:** Cálculo en tiempo real de la longitud necesaria de cada uno de los 6 actuadores ($l_1 \dots l_6$) en base a posiciones $(X, Y, Z)$ y rotaciones ($\text{pitch}, \text{roll}, \text{yaw}$).
-* **Filtro Washout Dinámico (Pasa-Altos):** Implementación de algoritmos de filtrado (pasa-altos/pasa-bajos) en Simulink para simular sensaciones inerciales (aceleraciones y velocidades angulares) en el autopiloto sin saturar los límites mecánicos de los actuadores.
-* **Integración con Simulink y FlightGear:** Co-simulación en tiempo real mediante comunicación UDP, desacoplando el cálculo dinámico en Simulink de la animación visual 3D en FlightGear.
-* **Visualización 3D:** Renderizado vectorial en 3D del chasis base y la plataforma superior articulada.
+- **Simulación cinemática inversa:** Cálculo en tiempo real de la longitud necesaria de cada uno de los 6 actuadores ($l_1 \dots l_6$) en base a posiciones $(X, Y, Z)$ y rotaciones ($\text{pitch}, \text{roll}, \text{yaw}$).
+- **Filtro Washout Dinámico (Pasa-Altos):** Implementación de algoritmos de filtrado (pasa-altos/pasa-bajos) en Simulink para simular sensaciones inerciales (aceleraciones y velocidades angulares) en el autopiloto sin saturar los límites mecánicos de los actuadores.
+- **Integración con Simulink y FlightGear:** Co-simulación en tiempo real mediante comunicación UDP, desacoplando el cálculo dinámico en Simulink de la animación visual 3D en FlightGear.
+- **Visualización 3D:** Renderizado vectorial en 3D del chasis base y la plataforma superior articulada.
 
 ---
 
 ## 📁 Estructura del Repositorio
 
 ```plataforma-stewart-6dof/
-├── docs/                       # Documentación técnica y memoria del proyecto
-│   ├── bibliografia/           # Papers, data-sheets y manuales técnicos (PDFs)
-│   ├── decisiones/             # Registros de Decisiones (ADR 0001 Washout, ADR 0002 MATLAB)
-│   ├── guias/                  # Guías operativas, flujo Git y selección tecnológica
+├── docs/                 # Documentación técnica y memoria del proyecto
+│   ├── bibliografia/     # Papers, data-sheets y manuales técnicos (PDFs)
+│   ├── decisiones/       # Registros de Decisiones (ADR 0001 Washout, ADR 0002 MATLAB)
+│   ├── guias/            # Guías operativas, flujo Git y selección tecnológica
 │   └── proyecto_contexto_hitl.md # Definición de objetivos, problema y contexto HITL
-├── src/                        # Modelos y scripts de simulación
-│   ├── matlab/                 # Scripts (.m) de cinemática, parámetros y matrices
-│   └── simulink/               # Modelos (.slx) de dinámica de vuelo y control HITL
-├── tests/                      # Pruebas de verificación de algoritmos
-├── .gitignore                  # Archivos ignorados por Git
-└── README.md                   # Portada y documentación principal
+├── img/                  # Imágenes de capturas, evidencias de laboratorio y diagramas
+├── src/                  # Modelos y scripts de simulación
+│   ├── matlab/           # Scripts (.m) de cinemática, parámetros y matrices
+│   └── simulink/         # Modelos (.slx) de dinámica de vuelo y control HITL
+├── tests/                # Pruebas de verificación (firmware ESP32, temporización, PWM)
+├── .gitignore            # Archivos ignorados por Git
+└── README.md             # Portada y documentación principal
 ```
 ---
 
